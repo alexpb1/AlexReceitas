@@ -9,3 +9,4 @@ class ListandoReceitas(admin.ModelAdmin):
     list_per_page=3
 
 admin.site.register(Receita, ListandoReceitas)
+    

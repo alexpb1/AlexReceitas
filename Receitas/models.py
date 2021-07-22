@@ -1,9 +1,11 @@
 from django.db import models
 from datetime import datetime
+from pessoas.models import  Pessoa
 
 from django.db.models.fields import DateTimeField
 
 class Receita(models.Model):
+    pessoa=models.ForeignKey(Pessoa, on_delete=models.CASCADE)
     nome_receita=models.CharField(max_length=200)
     ingredientes=models.TextField(default='')
     modo_preparo= models.TextField(default='')
