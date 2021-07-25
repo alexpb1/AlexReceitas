@@ -13,5 +13,5 @@ class Receita(models.Model):
     rendimento=models.CharField(max_length=100)
     categoria=models.CharField(max_length=100)
     date_receita=models.DateTimeField(default=datetime.now, blank=True)
-    publica=models.BooleanField(default=False )
+    publicada=models.BooleanField(default=False )
 
