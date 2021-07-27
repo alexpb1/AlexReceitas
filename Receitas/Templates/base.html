@@ -20,7 +20,9 @@
     <link rel="stylesheet" href="{% static 'site.css' %}">
 
 </head>
-<!-- ##### All Javascript Files ##### -->
+<body>
+    {% block content %} {%endblock%} 
+    <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
     <script src="{% static 'js/jquery/jquery-2.2.4.min.js'%}"></script>
     <!-- Popper js -->
@@ -32,6 +34,6 @@
     <!-- Active js -->
     <script src="{% static 'js/active.js'%}"></script>
 </body>
-{% block content %} {%endblock%} 
+
 
 </html>
