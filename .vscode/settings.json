@@ -1,4 +1,0 @@
-{
-    "python.pythonPath": "C:\\Users\\alexsandro\\AppData\\Local\\Programs\\Python\\Python38\\python.exe",
-    "python.linting.pylintArgs": ["--load-plugins=pylint_django"],
-}
