@@ -8,8 +8,19 @@
         <img src="{% static 'img/core-img/pizza.png'%}" alt="">
     </div>
 
-    {% include 'partials/_busca.html' %}
-    {% include 'partials/_menu.html' %}
+{% include 'partials/_busca.html' %}
+{% include 'partials/_menu.html' %}
+<div class="contact-area section-padding-0-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading">
+                    <h3>Olá {{ user.username }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
     <!-- ##### Best Receipe Area Start ##### -->
     <section class="best-receipe-area">
         <div class="container">
@@ -19,7 +30,6 @@
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
-                        <div>
                         {% if receita.foto_receita == '0'%}
                             <img src="{% static 'img/bg-img/foto_receita.png'%}" alt="">
                         {% else %}
@@ -34,7 +44,6 @@
                 </div>
                 {% endfor %}
                 {% else %}
-                    <p>Receita não encontrada</p>
                 {% endif %}
             </div>
         </div>
