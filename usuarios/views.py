@@ -37,15 +37,12 @@ def login(request):
         email=request.POST['email']
         password=request.POST['password']
         if email=="" or password=="":
-            print('Os campos email e senha não pode ficar em branco')
             return redirect ('login')
-        print(email, password)
         if User.objects.filter(email=email).exists():
             nome=User.objects.filter(email=email).values_list('username', flat=True).get()
             user=auth.authenticate(request, username=nome, password=password)
             if user is not None:
                 auth.login(request, user)
-                print('Login realizado')
         return redirect('dashboard')
     return render(request, 'usuarios/login.html')
 
